@@ -1,7 +1,5 @@
 export PATH=~/bin:/usr/local/bin:~/code/scripts:$PATH
 export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
-export ALT_REF_SITE_URL=http://localhost:5000
-export REDFIN_DATA_SECURE=/Users/danielgomez/redfin/config/
 if [ -f `brew --prefix`/etc/bash_completion ]; then
     . `brew --prefix`/etc/bash_completion
 fi
@@ -16,9 +14,6 @@ fi
 # for 'too many open files' issue
 ulimit -n 8000
 
-export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).
-eval "$($HOME/code/fin/bin/fin init -)"
-export REDFIN_MAIN=$HOME/code/main
 
 #add key to the terminal session for github to use for aut
 ssh-add ~/.ssh/id_rsa
