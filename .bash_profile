@@ -1,3 +1,5 @@
+export PATH=~/bin:/usr/local/bin:~/code/scripts:$PATH
+export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 if [ -f `brew --prefix`/etc/bash_completion ]; then
     . `brew --prefix`/etc/bash_completion
 fi
@@ -12,6 +14,10 @@ if command -v pyenv 1>/dev/null 2>&1; then
     eval "$(pyenv init -)"
     eval "$(pyenv virtualenv-init -)";
 fi
+
+# for 'too many open files' issue
+ulimit -n 8000
+
 
 #add key to the terminal session for github to use for aut
 ssh-add ~/.ssh/id_rsa
