@@ -47,8 +47,9 @@ mkcd()
 }
 
 #GVL Aliases
-alias runpapi="cd ~/gvl/PAPI/ && grails run-app -port 8090"
+alias runpapi="rm -rf ~/gvl/PAPI/build && cd ~/gvl/PAPI/ && grails run-app -port 8090"
 alias runcricket="~/gvl/cricket/ && grails run-app"
+alias testpapi="yarn test --watch=false --cricketEnv=testing --papiEnv=testing-papi --data=production-restore --schemas"
 
 
 
@@ -56,9 +57,10 @@ alias runcricket="~/gvl/cricket/ && grails run-app"
 alias gitpu="git push"
 alias gits="git status"
 alias gitmaster="git checkout master"
-alias gitpullmaster="git pull origin master"
+alias gitpm="git pull origin master"
 alias gitp="git push"
 alias gitsw="git switch -"
+alias gitaa="git add --all"
 
 gitcom()
 {
