@@ -1,0 +1,14 @@
+[user]
+    # These will be overridden by Gitpod's own settings
+    name = Your Name
+    email = your.email@example.com
+
+[color]
+    ui = auto
+
+[core]
+    editor = code --wait
+    autocrlf = input
+    
+[pull]
+    rebase = false 
